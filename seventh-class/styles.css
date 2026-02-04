@@ -1,0 +1,14 @@
+.hero-text {
+    font-weight: bold;
+    color: brown;
+    margin-bottom: 48px;
+    font-size: 12px;
+    width: 50%;
+}
+
+.hero-image {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;  
+    object-position: center;
+}
