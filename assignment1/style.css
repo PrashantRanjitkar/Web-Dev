@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.stakeholders {
+  max-width: 900px;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.stakeholders h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.stakeholders p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.stakeholders a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.stakeholders a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+}
