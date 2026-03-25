@@ -1,0 +1,46 @@
+/* 1. Global Reset */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Page & Container Heights */
+body {
+  height: 500vh; /* Adds scroll room */
+}
+
+.wrapper {
+  height: 200vh;
+  background: silver;
+}
+
+.spacer {
+  height: 100vh;
+}
+
+/* 3. Base Sticky Logic */
+.sticky-box {
+  height: 100px;
+  width: 100px;
+  position: -webkit-sticky; /* Support for Safari */
+  position: sticky;
+}
+
+/* 4. Specific Positioning & Colors */
+
+/* Green and Yellow stay at the top */
+.bg-green {
+  background: green;
+  top: 0; 
+}
+
+.bg-yellow {
+  background: yellow;
+  top: 0;
+}
+
+/* The Red box (in the wrapper) sticks to the bottom */
+.wrapper .sticky-box {
+  background-color: red;
+  bottom: 0; 
+}
