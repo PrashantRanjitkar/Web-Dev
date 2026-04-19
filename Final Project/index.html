@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prashant Ranjitkar | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Animated Background -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="toggle-icon sun">&#9788;</span>
+      <span class="toggle-icon moon">&#9790;</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="nav-logo">Prashant<span class="accent">.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-clocks">
+        <div class="mini-clock">
+          <span class="clock-label">NPT</span>
+          <span class="clock-time" id="navNepalClock">--:--</span>
+        </div>
+        <div class="mini-clock">
+          <span class="clock-label">YOU</span>
+          <span class="clock-time" id="navUserClock">--:--</span>
+        </div>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-left">
+          <p class="hero-greeting animate-in">Hello, I'm</p>
+          <h1 class="hero-name animate-in">
+            Prashant<br />Ranjitkar<span class="accent">.</span>
+          </h1>
+          <p class="hero-degree animate-in">BN220653</p>
+          <p class="hero-tagline animate-in">
+            I am a drummer and into music scene in Nepal. I also have experience in event management and own a company named Roya Acoustics. Do check out on social media.
+          </p>
+          <div class="hero-buttons animate-in">
+            <a href="#contact" class="btn btn-primary">
+              <span>Let's Talk</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#works" class="btn btn-outline">
+              <span>View Works</span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+          <div class="hero-stats animate-in">
+            <div class="stat">
+              <span class="stat-number" data-count="30">0</span
+              ><span class="accent">+</span>
+              <span class="stat-label">Events Organized</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="4">0</span
+              ><span class="accent">+</span>
+              <span class="stat-label">Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="99">0</span
+              ><span class="accent">%</span>
+              <span class="stat-label">Execution</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-center">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-bg"></div>
+            <div class="hero-avatar">
+              <div class="avatar-placeholder">
+                <span><img src="image.jpg" alt=""></span>
+              </div>
+            </div>
+            <div class="hero-floating-badge badge-1"> Drummer</div>
+            <div class="hero-floating-badge badge-2"> Art</div>
+            <div class="hero-floating-badge badge-3"> Music</div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="service-card animate-in">
+            <h3>Web Development</h3>
+            <p>
+              Building responsive and performant web applications with modern
+              technologies.
+            </p>
+          </div>
+          <div class="service-card animate-in">
+            <h3>UI/UX Design</h3>
+            <p>
+              Creating intuitive and beautiful user interfaces with great user
+              experience.
+            </p>
+          </div>
+          <div class="service-card animate-in">
+            <h3>Problem Solving</h3>
+            <p>
+              Analyzing complex challenges and developing efficient, scalable
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- Clocks Section -->
+    <section class="clocks-section" id="clocks">
+      <div class="section-header">
+        <h2 class="section-title animate-in">
+          Time Zones<span class="accent">.</span>
+        </h2>
+        <p class="section-subtitle animate-in">
+          Nepal ma kati baje cha ra timro time kati baje cha herna yaha hernu hola
+        </p>
+      </div>
+      <div class="clocks-container">
+        <div class="clock-card nepal-clock animate-in">
+          <h3>Nepal Time</h3>
+          <p class="clock-zone">Asia/Kathmandu (UTC+5:45)</p>
+          <div class="digital-clock" id="nepalClock">
+            <span class="clock-hours">00</span>
+            <span class="clock-sep">:</span>
+            <span class="clock-minutes">00</span>
+            <span class="clock-sep">:</span>
+            <span class="clock-seconds">00</span>
+            <span class="clock-ampm">AM</span>
+          </div>
+          <p class="clock-date" id="nepalDate">Loading...</p>
+        </div>
+        <div class="clock-card user-clock animate-in">
+          <h3>Your Time</h3>
+          <p class="clock-zone" id="userTimezone">Detecting...</p>
+          <div class="digital-clock" id="userClock">
+            <span class="clock-hours">00</span>
+            <span class="clock-minutes"></span>
+            <span class="clock-sep">:</span>
+            <span class="clock-seconds"></span>
+            <span class="clock-ampm">AM</span>
+          </div>
+          <p class="clock-date" id="userDate">Loading...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="section-header">
+        <h2 class="section-title animate-in">
+          About Me<span class="accent">.</span>
+        </h2>
+        <p class="section-subtitle animate-in">Get to know who I am</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text animate-in">
+          <p>
+            Hey there! I'm <strong>Prashant Ranjitkar</strong>, a drummer from Kathmandu.As a drummer trained at the <strong>Nepal Music Center</strong> and a member of the rock band <strong>Animals Nepal</strong>, I am deeply passionate about promoting music.
+          </p>
+          <p>
+            I'm thrilled to introduce my company, <strong>Roya Acoustic</strong>, which is dedicated to organizing events that showcase original music and empower emerging artists.
+          </p>
+          <p>
+            My experience extends to working as a content and event manager at <strong>Kgarira</strong>, where I honed my skills in marketing and communication. I believe in creating memorable experiences through music and events, and I am always eager to connect and collaborate with fellow creatives. Thank you for visiting, and I look forward to sharing my journey with you! 
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Name</span>
+              <span class="info-value">Prashant Ranjitkar</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Degree</span>
+              <span class="info-value">BSIT</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <span class="info-value">Nepal</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Interests</span>
+              <span class="info-value">Drumming, Music, Events, Community</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="section-header">
+        <h2 class="section-title animate-in">
+          Skills<span class="accent">.</span>
+        </h2>
+        <p class="section-subtitle animate-in">What I work with</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Drums</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Events</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Social Media</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Communication</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Teamwork</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Socializing</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Networking</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="78"></div>
+          </div>
+        </div>
+        <div class="skill-card animate-in" data-tilt>
+          <h4>Critical Thinking</h4>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="85"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume-section" id="resume">
+      <div class="section-header">
+        <h2 class="section-title animate-in">
+          Resume<span class="accent">.</span>
+        </h2>
+        <p class="section-subtitle animate-in">My professional journey</p>
+      </div>
+      <div class="resume-container animate-in">
+        <div class="resume-display">
+          <div class="resume-paper">
+            <div class="resume-header-block">
+              <h2>PRASHANT RANJITKAR</h2>
+              <p class="resume-subtitle-text">
+                BSIT Graduate | Drummer | Event Management
+              </p>
+              <p class="resume-contact-line">
+                Nepal | prashant.ranitkar@westcliff.edu |
+                linkedin.com/in/prashantranjitkar
+              </p>
+            </div>
+
+            <div class="resume-body">
+              <div class="resume-col">
+                <div class="resume-block">
+                  <h3>PROFESSIONAL SUMMARY</h3>
+                  <p>
+                    A young brain who wants to explore and experience and is still figuring it out in life.
+                  </p>
+                </div>
+
+                <div class="resume-block">
+                  <h3>EDUCATION</h3>
+                  <div class="resume-entry">
+                    <h4>Bachelor of Science in Information Technology</h4>
+                    <p> King's College</p>
+                    <p class="resume-date">2022 - 2026</p>
+                    <p>
+                      Relevant coursework: Cybersecurity Web
+                      Development, Networking
+                    </p>
+                    <h4>High School Diploma</h4>
+                    <p> American GED Center </p>
+                    <p class="resume-date">2020 - 2022</p>
+                    <h4>A-Levels</h4>
+                    <p> NAMI College </p>
+                    <p class="resume-date">2018 - 2020</p>
+                    <h4>School Leaving Center</h4>
+                    <p> Malpi City School </p>
+                    <p class="resume-date">2008 - 2018</p>
+                  </div>
+                </div>
+
+                <div class="resume-block">
+                  <h3>EXPERIENCE</h3>
+                  <div class="resume-entry">
+                    <h4>Jazzmandu</h4>
+                    <p>
+                      Kathmandu / November 2023 - October 2025  
+                    </p>
+                    <p>
+                      Supervised and coordinated international artists and handled media as a social media assistant.
+                    </p>
+                  </div>
+                  <div class="resume-entry">
+                    <h4>Drum Technician of Albatross Band</h4>
+                    <p>
+                      Albatross Band - Kathmandu - Present
+                    </p>
+                  </div>
+                  <div class="resume-entry">
+                    <h4>Artist & Sounds Director</h4>
+                    <p>
+                    Roya Acoustic / Kathmandu / November 2019 - Present
+                    </p>
+                    <p>Roya is an an event-organizing company with a shared passion for promoting original music by local and international, underrated artists. Our company has been at the forefront of supporting emerging and fostering a thriving local music scene in our community.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resume-col">
+                <div class="resume-block">
+                  <h3>TECHNICAL SKILLS</h3>
+                  <p>
+                    <strong>Languages:</strong> JavaScript, Python, HTML, CSS,
+                    SQL, Java
+                  </p>
+                  <p><strong>Frameworks:</strong> React, Node.js, Express</p>
+                  <p><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL</p>
+                  <p><strong>Tools:</strong> Git, VS Code, Figma, Postman</p>
+                  <p>
+                    <strong>Other:</strong> REST APIs, Agile, Responsive Design
+                  </p>
+                </div>
+
+                <div class="resume-block">
+                  <h3>CERTIFICATIONS</h3>
+                  <div class="resume-entry">
+                    <h4>Distinction in Rock School Drum Training (Grade 4), Nepal Music Center, Gaushala</h4>
+                    <p class="resume-date">2021</p>
+                  </div>
+                  <div class="resume-entry">
+                    <h4>Python for Data Science</h4>
+                    <p class="resume-date">2023</p>
+                  </div>
+                </div>
+
+                <div class="resume-block">
+                  <h3>SOFT SKILLS</h3>
+                  <p>
+                    Team Collaboration, Critical Thinking, Communication, Time
+                    Management, Adaptability, Continuous Learning
+                  </p>
+                </div>
+
+                <div class="resume-block">
+                  <h3>LANGUAGES</h3>
+                  <p>
+                    Nepali (Native), English (Fluent), Hindi (Conversational)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="works-section" id="works">
+      <div class="section-header">
+        <h2 class="section-title animate-in">
+          Works<span class="accent">.</span>
+        </h2>
+        <p class="section-subtitle animate-in">Some things I've worked on</p>
+      </div>
+      <div class="works-grid">
+        <div class="work-card animate-in">
+          <div class="work-image">
+            <div>
+            
+              <span><img src="Roya.png" alt=""></span>
+            </div>
+            <div class="work-overlay">
+              <a href="https://roya.com.np/" class="work-link" target="_blank">View Project &#8599;</a>
+            </div>
+          </div>
+          <div class="work-info">
+            <h3>Roya</h3>
+            <p>
+              Event organizing company that promotes original music by local and international, underrated artists.
+            <div class="work-tags">
+              <span>Original</span><span>Intimate</span><span>Music</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card animate-in">
+          <div class="work-image">
+            <div
+              class="work-placeholder"
+              style="background: linear-gradient(135deg, #f093fb, #f5576c)"
+            >
+            <img src="Albatross.JPG" alt="">
+            </div>
+            <div class="work-overlay">
+              <a href="https://www.youtube.com/@AlbatrossNepalOfficial1998" class="work-link" target="_blank">View Project &#8599;</a>
+            </div>
+          </div>
+          <div class="work-info">
+            <h3>Albatross</h3>
+            <p>
+              A rock band from Nepal known for their energetic performances and original music.
+            </p>
+            <div class="work-tags">
+              <span>Rock</span><span>Concert</span><span>Live</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card animate-in">
+          <div class="work-image">
+            <div
+              class="work-placeholder"
+              style="background: linear-gradient(135deg, #4facfe, #00f2fe)"
+            >
+            <img src="Jazzmandu.jpg" alt="">
+            </div>
+            <div class="work-overlay">
+              <a href="https://jazzmandu.org/" class="work-link" target="_blank">View Project &#8599;</a>
+            </div>
+          </div>
+          <div class="work-info">
+            <h3>Jazzmandu</h3>
+            <p>
+              Kathmandu Jazz festival held in Kathmandu, Nepal, showcasing local and global jazz talents and fostering cultural exchange.
+            </p>
+            <div class="work-tags">
+              <span>KathmanduJazzFestival</span><span>Jazz</span><span>Cultural Exchange</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-header">
+        <h2 class="section-title animate-in">
+          Get In Touch<span class="accent">.</span>
+        </h2>
+        <p class="section-subtitle animate-in">
+          Have a project in mind? Let's talk!
+        </p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info animate-in">
+          <div class="contact-item">
+            <div>
+              <h4>Location</h4>
+              <p>Boudha, Nepal</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div>
+              <h4>Email</h4>
+              <p>prashant.ranitkar@westcliff.edu</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div>
+              <h4>Contact</h4>
+              <p>+977 9861112170</p>
+            </div>
+          </div>
+        </div>
+        <form
+          class="contact-form animate-in"
+          id="contactForm"
+          action="https://formspree.io/f/mlganpzp"
+          method="POST"
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              id="formName"
+              placeholder=" "
+              required
+            />
+            <label for="formName">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              id="formEmail"
+              placeholder=" "
+              required
+            />
+            <label for="formEmail">Your Email</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="subject"
+              id="formSubject"
+              placeholder=" "
+              required
+            />
+            <label for="formSubject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              id="formMessage"
+              rows="5"
+              placeholder=" "
+              required
+            ></textarea>
+            <label for="formMessage">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">
+            <span>Send Message</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-logo">Prashant<span class="accent">.</span></p>
+        <p class="footer-text">Crafted with art & creativity</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/prashantranjitkar/" aria-label="Instagram">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+            </svg>
+
+          </a>
+          <a href="https://www.facebook.com/prashant.ranjitkar.9/" aria-label="Facebook">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+            </svg>
+
+          </a>
+        </div>
+        <p class="footer-copy">
+          &copy; 2026 Prashant Ranjitkar. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Click Ripple Effect Container -->
+    <div id="clickRipples"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+Hi Sanzay sir
